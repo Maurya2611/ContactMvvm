@@ -1,0 +1,6 @@
+framework module Pods_ContactMvvmExample_ContactMvvmExampleUITests {
+  umbrella header "Pods-ContactMvvmExample-ContactMvvmExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
