@@ -11,13 +11,16 @@
 		3A1C845BE6FE50A3D18AF669 /* Pods_ContactMvvmExample_ContactMvvmExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08588BFCE5DA3BAC4FE01FE8 /* Pods_ContactMvvmExample_ContactMvvmExampleUITests.framework */; };
 		D735BEC80B66E2A86629BD86 /* Pods_ContactMvvmExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60C05F6A1F780C99EA86DE3 /* Pods_ContactMvvmExample.framework */; };
 		E0B12CB32345997F00294BDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CB22345997F00294BDD /* AppDelegate.swift */; };
-		E0B12CB52345997F00294BDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CB42345997F00294BDD /* ViewController.swift */; };
 		E0B12CB82345997F00294BDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B12CB62345997F00294BDD /* Main.storyboard */; };
 		E0B12CBB2345997F00294BDD /* ContactMvvmExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CB92345997F00294BDD /* ContactMvvmExample.xcdatamodeld */; };
 		E0B12CBD2345998000294BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B12CBC2345998000294BDD /* Assets.xcassets */; };
 		E0B12CC02345998000294BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B12CBE2345998000294BDD /* LaunchScreen.storyboard */; };
 		E0B12CCB2345998000294BDD /* ContactMvvmExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CCA2345998000294BDD /* ContactMvvmExampleTests.swift */; };
 		E0B12CD62345998000294BDD /* ContactMvvmExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CD52345998000294BDD /* ContactMvvmExampleUITests.swift */; };
+		E0B12CE52345A05300294BDD /* ContactLandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CE42345A05300294BDD /* ContactLandingVC.swift */; };
+		E0B12CEA2345F41E00294BDD /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CE82345F41E00294BDD /* SectionHeaderView.swift */; };
+		E0B12CEB2345F41E00294BDD /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0B12CE92345F41E00294BDD /* SectionHeaderView.xib */; };
+		E0B12CED2345F48C00294BDD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B12CEC2345F48C00294BDD /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		DECC9D2293EEF6C02661181A /* Pods-ContactMvvmExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactMvvmExampleTests.release.xcconfig"; path = "Target Support Files/Pods-ContactMvvmExampleTests/Pods-ContactMvvmExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		E0B12CAF2345997F00294BDD /* ContactMvvmExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactMvvmExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B12CB22345997F00294BDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0B12CB42345997F00294BDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0B12CB72345997F00294BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0B12CBA2345997F00294BDD /* ContactMvvmExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactMvvmExample.xcdatamodel; sourceTree = "<group>"; };
 		E0B12CBC2345998000294BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +63,10 @@
 		E0B12CD12345998000294BDD /* ContactMvvmExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactMvvmExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B12CD52345998000294BDD /* ContactMvvmExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactMvvmExampleUITests.swift; sourceTree = "<group>"; };
 		E0B12CD72345998000294BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0B12CE42345A05300294BDD /* ContactLandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLandingVC.swift; sourceTree = "<group>"; };
+		E0B12CE82345F41E00294BDD /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		E0B12CE92345F41E00294BDD /* SectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		E0B12CEC2345F48C00294BDD /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +145,9 @@
 		E0B12CB12345997F00294BDD /* ContactMvvmExample */ = {
 			isa = PBXGroup;
 			children = (
+				E0B12CE72345F41E00294BDD /* Component */,
 				E0B12CB22345997F00294BDD /* AppDelegate.swift */,
-				E0B12CB42345997F00294BDD /* ViewController.swift */,
+				E0B12CE42345A05300294BDD /* ContactLandingVC.swift */,
 				E0B12CB62345997F00294BDD /* Main.storyboard */,
 				E0B12CBC2345998000294BDD /* Assets.xcassets */,
 				E0B12CBE2345998000294BDD /* LaunchScreen.storyboard */,
@@ -166,6 +173,16 @@
 				E0B12CD72345998000294BDD /* Info.plist */,
 			);
 			path = ContactMvvmExampleUITests;
+			sourceTree = "<group>";
+		};
+		E0B12CE72345F41E00294BDD /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E0B12CEC2345F48C00294BDD /* BaseView.swift */,
+				E0B12CE92345F41E00294BDD /* SectionHeaderView.xib */,
+				E0B12CE82345F41E00294BDD /* SectionHeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +296,7 @@
 				E0B12CC02345998000294BDD /* LaunchScreen.storyboard in Resources */,
 				E0B12CBD2345998000294BDD /* Assets.xcassets in Resources */,
 				E0B12CB82345997F00294BDD /* Main.storyboard in Resources */,
+				E0B12CEB2345F41E00294BDD /* SectionHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +408,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B12CBB2345997F00294BDD /* ContactMvvmExample.xcdatamodeld in Sources */,
-				E0B12CB52345997F00294BDD /* ViewController.swift in Sources */,
+				E0B12CE52345A05300294BDD /* ContactLandingVC.swift in Sources */,
+				E0B12CED2345F48C00294BDD /* BaseView.swift in Sources */,
 				E0B12CB32345997F00294BDD /* AppDelegate.swift in Sources */,
+				E0B12CEA2345F41E00294BDD /* SectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +524,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -558,6 +579,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -570,6 +592,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ContactMvvmExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +613,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ContactMvvmExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
