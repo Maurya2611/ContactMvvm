@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionButton" customModule="Contacts" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="KQ5-gl-7fx" id="8Zm-oN-F3j"/>
+                <outlet property="container" destination="iN0-l3-epB" id="5DQ-at-Z0p"/>
+                <outlet property="imageView" destination="Frv-QR-0RG" id="F3D-Nz-gXH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="81" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsZ-Ud-6YD">
+                    <rect key="frame" x="0.0" y="0.0" width="81" height="70"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_button" translatesAutoresizingMaskIntoConstraints="NO" id="Frv-QR-0RG">
+                            <rect key="frame" x="18.5" y="2" width="44" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Frv-QR-0RG" secondAttribute="height" multiplier="1:1" id="avP-rx-h8q"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9D-zw-m9K" customClass="BaseLabel" customModule="Contacts" customModuleProvider="target">
+                            <rect key="frame" x="2" y="51" width="77" height="19"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ5-gl-7fx">
+                            <rect key="frame" x="0.0" y="0.0" width="81" height="70"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="KQ5-gl-7fx" firstAttribute="leading" secondItem="GsZ-Ud-6YD" secondAttribute="leading" id="9i3-m4-VAv"/>
+                        <constraint firstItem="KQ5-gl-7fx" firstAttribute="top" secondItem="GsZ-Ud-6YD" secondAttribute="top" id="AIQ-TW-WBI"/>
+                        <constraint firstItem="Frv-QR-0RG" firstAttribute="centerX" secondItem="GsZ-Ud-6YD" secondAttribute="centerX" id="D6J-QW-OmK"/>
+                        <constraint firstAttribute="bottom" secondItem="J9D-zw-m9K" secondAttribute="bottom" id="Mac-Hz-Afg"/>
+                        <constraint firstItem="Frv-QR-0RG" firstAttribute="top" secondItem="GsZ-Ud-6YD" secondAttribute="top" constant="2" id="NEv-ay-qqP"/>
+                        <constraint firstAttribute="trailing" secondItem="J9D-zw-m9K" secondAttribute="trailing" constant="2" id="OF6-KD-8ca"/>
+                        <constraint firstAttribute="bottom" secondItem="KQ5-gl-7fx" secondAttribute="bottom" id="a2s-hA-6j0"/>
+                        <constraint firstAttribute="trailing" secondItem="KQ5-gl-7fx" secondAttribute="trailing" id="btq-gm-gzc"/>
+                        <constraint firstItem="J9D-zw-m9K" firstAttribute="top" secondItem="Frv-QR-0RG" secondAttribute="bottom" constant="5" id="iO7-gn-LG9"/>
+                        <constraint firstItem="J9D-zw-m9K" firstAttribute="leading" secondItem="GsZ-Ud-6YD" secondAttribute="leading" constant="2" id="l6n-Kk-gjQ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ZIC-km-vT0"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GsZ-Ud-6YD" secondAttribute="bottom" id="dWS-ib-0or"/>
+                <constraint firstItem="GsZ-Ud-6YD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iun-8Y-PHS"/>
+                <constraint firstItem="GsZ-Ud-6YD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jSD-V7-2eE"/>
+                <constraint firstAttribute="trailing" secondItem="GsZ-Ud-6YD" secondAttribute="trailing" id="mtT-QE-h26"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.82308845577214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="message_button" width="44" height="44"/>
+    </resources>
+</document>

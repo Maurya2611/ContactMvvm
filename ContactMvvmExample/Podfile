@@ -4,7 +4,11 @@
 target 'ContactMvvmExample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SwiftLint'
+  pod 'pop'
+  pod 'Kingfisher', '~> 4.10.1'
+  pod 'Networking', '~> 4.1.1'
+
+  
   # Pods for ContactMvvmExample
   target 'ContactMvvmExampleTests' do
     inherit! :search_paths

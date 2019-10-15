@@ -1,0 +1,74 @@
+[
+    {
+        "id": 6027,
+        "first_name": "Chandresh Maurya SUT",
+        "last_ name": "SUT_LastName",
+        "profilepic": "/images/mising.png",
+        "favorite": false,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6608.json"
+    },
+    {
+        "id": 6608,
+        "first_name": "Some",
+        "lastname": "Two",
+        "profilepic": "/images/missing.png",
+        "favorite": false,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6608.json"
+    },
+    {
+        "id": 6693,
+        "first_name": "000@",
+        "lastname": "00",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6693.json"
+    },
+    {
+        "id": 6720,
+        "first_name": "000123456Jack",
+        "lastname": "dean",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6720.json"
+    },
+    {
+        "id": 6582,
+        "first_name": "0111",
+        "lastname": "008",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6582.json"
+    },
+    {
+        "id": 6566,
+        "first_name": "0Aa",
+        "lastname": "BBB",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6566.json"
+    },
+    {
+        "id": 6706,
+        "first_name": "12",
+        "lastname": "23",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6706.json"
+    },
+    {
+        "id": 6705,
+        "first_name": "12",
+        "lastname": "23",
+        "profilepic": "/images/missing.png",
+        "favorite": true,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/6705.json"
+    },
+    {
+        "id": 4915,
+        "first_name": "Testuserunique",
+        "lastname": "random name",
+        "profilepic": "https://contacts-app.s3-ap-southeast-1.amazonaws.com/contacts/profilepics/000/004/915/original/surya_avatar.png?1556873190",
+        "favorite": false,
+        "url": "http://gojek-contacts-app.herokuapp.com/contacts/4915.json"
+    }
+]
