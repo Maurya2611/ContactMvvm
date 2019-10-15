@@ -26,7 +26,7 @@ struct Contact: Codable {
         return Contact(id: 6027,
                        first_name: "Chandresh Maurya",
                        last_name: "Maurya",
-                       email: "SUT_email@SUT.com",
+                       email: "chandresh.maurya326@.com",
                        phone_number: nil,
                        profile_pic: nil,
                        favorite: nil,

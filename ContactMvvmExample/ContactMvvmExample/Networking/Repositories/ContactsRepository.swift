@@ -9,7 +9,6 @@
 import Foundation
 
 class ContactsRepository: Repository<Contact> {
-
     typealias SingleC = ((Contact?, Error?) -> Void)
     typealias ArrayC = (([Contact]?, Error?) -> Void)
     

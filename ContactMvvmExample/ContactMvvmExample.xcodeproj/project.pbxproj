@@ -347,9 +347,9 @@
 		E0AE88EF2355728A00007D2A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E0AE88F02355728A00007D2A /* ContactListVC.swift */,
 				E0AE88F12355728A00007D2A /* Base */,
 				E0AE88F52355728A00007D2A /* ContactDetailsVC.swift */,
+				E0AE88F02355728A00007D2A /* ContactListVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -399,13 +399,13 @@
 		E0AE89042355728A00007D2A /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E0AE890B2355728A00007D2A /* Base */,
 				E0AE89052355728A00007D2A /* ProfileHeaderCell.swift */,
 				E0AE89062355728A00007D2A /* ContactCell.swift */,
 				E0AE89072355728A00007D2A /* LoaderCell.swift */,
 				E0AE89082355728A00007D2A /* FieldCell.swift */,
 				E0AE89092355728A00007D2A /* ActionButton.swift */,
 				E0AE890A2355728A00007D2A /* DeleteCell.swift */,
-				E0AE890B2355728A00007D2A /* Base */,
 				E0AE890F2355728A00007D2A /* SectionHeader.swift */,
 			);
 			path = Class;

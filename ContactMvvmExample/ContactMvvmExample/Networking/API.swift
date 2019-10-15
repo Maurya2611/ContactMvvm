@@ -71,11 +71,11 @@ class API {
             if let dict = parametersDict {
                 queryString   = createQueryString(from: dict)
                 queryString   = queryString.addingPercentEncoding(
-                                withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
+                    withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
             }
-          
+            
             self.networking?.get("\(path)\(queryString)",
-                                completion: completion)
+                completion: completion)
         case .post:
             
             self.networking?.post(path,
@@ -88,7 +88,7 @@ class API {
                                  parameters: parametersDict,
                                  completion: completion)
         case .delete:
-
+            
             self.networking?.delete(path,
                                     parameters: parametersDict,
                                     completion: completion)
@@ -109,7 +109,7 @@ class MockAPI: API {
         
         return httpMethod.rawValue + "\(path.replacingOccurrences(of: "/", with: "-"))"
     }
-
+    
     override func request(request: Request?) {
         guard let request = request else { return }
         

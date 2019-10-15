@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 internal enum ContactDetailsType {
     case create
     case edit
@@ -15,7 +14,6 @@ internal enum ContactDetailsType {
 }
 
 class ContactDetailsVM: BaseContactVM {
-    
     override var contact: Contact? {
         didSet {
             firstName = contact?.first_name
@@ -24,9 +22,7 @@ class ContactDetailsVM: BaseContactVM {
             email     = contact?.email
         }
     }
-    
     internal var detailsType: ContactDetailsType?
-    
     internal var firstName: String?
     internal var lastName: String?
     internal var mobile: String?
@@ -38,30 +34,30 @@ class ContactDetailsVM: BaseContactVM {
         
         self.repository = repository
     }
-
+    
     override func request() {
         super.request()
-
+        
         guard let contact = contact else {
             self.viewState = .error(nil)
             return
         }
-
+        
         self.viewState = .loading(nil)
-
+        
         repository?.get(params: contact.id ?? 0,
                         completion: {[weak self] (contact, error) in
                             guard let self = self else { return }
-
+                            
                             guard error == nil,
                                 let contact = contact else {
-
+                                    
                                     let errorMsg = error?.localizedDescription ?? ""
                                     self.viewState = .error(errorMsg)
-
+                                    
                                     return
                             }
-
+                            
                             self.contact = contact
                             self.viewState = .success(nil)
         })
