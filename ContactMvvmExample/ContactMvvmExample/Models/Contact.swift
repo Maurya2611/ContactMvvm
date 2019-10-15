@@ -1,7 +1,6 @@
 //
 //  Contact.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh Maurya  on 03/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
@@ -20,13 +19,11 @@ struct Contact: Codable {
     var fullName: String {
         return (first_name ?? "") + " " + (last_name ?? "")
     }
-    
     static func createStub() -> Contact {
-        
         return Contact(id: 6027,
                        first_name: "Chandresh Maurya",
                        last_name: "Maurya",
-                       email: "chandresh.maurya326@.com",
+                       email: "chandresh.maurya326@gmail.com",
                        phone_number: nil,
                        profile_pic: nil,
                        favorite: nil,

@@ -1,14 +1,12 @@
 //
 //  ImageHelper.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
 extension UIImage {
     static func imageWithColor(_ color: UIColor) -> UIImage? {
         let rect = CGRect(x: 0,

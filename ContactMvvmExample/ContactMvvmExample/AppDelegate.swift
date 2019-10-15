@@ -1,7 +1,6 @@
 //
 //  AppDelegate.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //

@@ -1,7 +1,6 @@
 //
 //  ImageViewHelper.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //
@@ -19,7 +18,7 @@ extension UIImageView {
         if let url = urlStringWithSize.toURL() {
             var options: KingfisherOptionsInfo = []
             if shouldAnimate == true {
-                options.append(.transition(ImageTransition.fade(0.33)))
+                options.append(.transition(ImageTransition.fade(0.35)))
                 if keepCurrentImageWhileLoading == true {
                     options.append(.keepCurrentImageWhileLoading)
                 }
@@ -36,6 +35,9 @@ extension UIImageView {
         } else {
             self.image = placeholder as? UIImage
         }
+    }
+    internal func cancelKFTask() {
+        self.kf.cancelDownloadTask()
     }
     
     /*
@@ -103,8 +105,4 @@ extension UIImageView {
      }
      }
      */
-    
-    internal func cancelKFTask() {
-        self.kf.cancelDownloadTask()
-    }
 }

@@ -1,7 +1,6 @@
 //
 //  GlobalEnums.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh Maurya  on 03/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
@@ -33,7 +32,6 @@ enum ViewState: Equatable {
             return false
         }
     }
-    
     static func != (lhs: ViewState, rhs: ViewState) -> Bool {
         switch (lhs, rhs) {
         case (.loading(_), .loading(_)):

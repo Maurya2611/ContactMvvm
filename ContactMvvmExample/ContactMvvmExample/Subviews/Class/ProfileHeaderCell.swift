@@ -1,29 +1,24 @@
 //
 //  ProfileHeaderCell.swift
-//  Contacts
-//
+//  ContactMvvmExample
 //  Created by Chandresh Maurya  on 04/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
 
 import UIKit
-
 internal enum ButtonType: Int {
     case message = 0
     case call
     case email
     case favourite
 }
-
 protocol ProfileHeaderCellDelegate: class {
     func doMessage()
     func doCall()
     func doEmail()
     func doFavourite()
 }
-
 class ProfileHeaderCell: BaseCell {
-
     @IBOutlet weak var buttonStackHeight: NSLayoutConstraint?
     @IBOutlet weak var buttonStack: UIStackView?
     @IBOutlet weak var messageImageView: UIImageView?
@@ -45,46 +40,44 @@ class ProfileHeaderCell: BaseCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-            let frame                             = profileImageView?.frame.width ?? 0
+        let frame                             = profileImageView?.frame.width ?? 0
         profileImageView?.layer.masksToBounds = true
         profileImageView?.layer.cornerRadius  = frame / 2
         profileImageView?.layer.borderWidth   = 3
         profileImageView?.layer.borderColor   = UIColor.white.cgColor
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     @IBAction func didTapMessage(_ sender: UIButton) {
         delegate?.doMessage()
-            messageImageView?.bounce(withCompletion: nil)
+        messageImageView?.bounce(withCompletion: nil)
     }
     @IBAction func didTapCall(_ sender: UIButton) {
         delegate?.doCall()
-            callImageView?.bounce(withCompletion: nil)
+        callImageView?.bounce(withCompletion: nil)
     }
     @IBAction func didTapEmail(_ sender: UIButton) {
         delegate?.doEmail()
-            emailImageView?.bounce(withCompletion: nil)
+        emailImageView?.bounce(withCompletion: nil)
     }
     @IBAction func didTapFavourite(_ sender: UIButton) {
         delegate?.doFavourite()
-            UIView.animate(withDuration: 5) {
+        UIView.animate(withDuration: 5) {
             self.isFavourite.toggle()
         }
-           favouriteImageView?.bounce(withCompletion: nil)
+        favouriteImageView?.bounce(withCompletion: nil)
     }
 }
 extension ProfileHeaderCell {
     internal func setImageFrom(_ urlString: String) {
-            setProfileImageFrom(urlString,
-                            imageView: &profileImageView)
+        setProfileImageFrom(urlString, imageView: &profileImageView)
     }
     internal func doUpdateFromType(_ contactViewType: ContactViewType?) {
-            if contactViewType == .edit ||
+        if contactViewType == .edit ||
             contactViewType == .create {
-                    profileName?.isHidden       = true
+            profileName?.isHidden       = true
             buttonStackHeight?.constant = 0
             buttonStack?.subviews.forEach({ view in
                 view.subviews.forEach({ subView in
@@ -106,7 +99,7 @@ extension ProfileHeaderCell {
                     }
                 })
             })
-                    UIView.animate(withDuration: 0.2) {
+            UIView.animate(withDuration: 0.2) {
                 self.buttonStack?.layoutIfNeeded()
             }
         }

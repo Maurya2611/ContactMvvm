@@ -1,7 +1,6 @@
 //
 //  LoaderCell.swift
-//  FourSquare
-//
+//  ContactMvvmExample
 //  Created by Chandresh Maurya  on 02/02/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //

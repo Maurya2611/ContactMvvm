@@ -1,7 +1,6 @@
 //
 //  ContactDetailsVC.swift
-//  Contacts
-//
+//  ContactMvvmExample
 //  Created by Chandresh Maurya  on 04/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
@@ -37,22 +36,18 @@ UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
         for identifier in identifiers {
             let nib = UINib(nibName: identifier,
                             bundle: nil)
-            
             tableView?.register(nib,
                                 forCellReuseIdentifier: identifier)
         }
-        
         setShadowImageFrom(color: .clear)
         viewModel?.request()
     }
     /*
      // MARK: - Navigation
-     
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
+     // Pass the selected object to the new view controller. }
      */
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -178,7 +173,7 @@ extension ContactDetailsVC {
                                         cancelTitle: nil,
                                         acceptTitle: Strings.Ok,
                                         completion: {
-                                            completion()
+                                        completion()
         })
     }
     func createBarButtons() {
@@ -207,8 +202,7 @@ extension ContactDetailsVC {
             }
             self.showSuccessWith(message: Strings.createdContact,
                                  completion: {
-                                    self.dismiss(animated: true,
-                                                 completion: nil)
+                                    self.dismiss(animated: true, completion: nil)
             })
         })
     }
@@ -227,7 +221,6 @@ extension ContactDetailsVC {
                                                     self.createBarButtons()
                                                     return
                                                 }
-                                                
                                                 self.createViewTypeBarButton()
                                             })
         })
@@ -250,7 +243,6 @@ extension ContactDetailsVC {
         button = UIBarButtonItem(barButtonSystemItem: item,
                                  target: self,
                                  action: #selector(didTapEditButton(_:)))
-        
         navigationController?.navigationBar.topItem?.leftBarButtonItem = nil
         navigationController?.navigationBar.topItem?.hidesBackButton   = false
         navigationController?.navigationBar.topItem?.rightBarButtonItem = button
@@ -302,10 +294,8 @@ extension ContactDetailsVC: DeleteCellDelegate {
     }
 }
 extension ContactDetailsVC: BaseVMDelegate {
-    
     func didUpdateModel(_ viewModel: BaseVM,
                         withState viewState: ViewState) {
-        
         tableView?.reloadData()
     }
 }

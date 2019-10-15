@@ -1,14 +1,12 @@
 //
 //  UnicodeScalarHelper.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
 extension UnicodeScalar {
     var isEmoji: Bool {
         switch value {

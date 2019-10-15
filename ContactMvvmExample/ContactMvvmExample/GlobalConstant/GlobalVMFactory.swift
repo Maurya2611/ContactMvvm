@@ -1,7 +1,6 @@
 //
 //  GlobalFactory.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh Maurya  on 03/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //

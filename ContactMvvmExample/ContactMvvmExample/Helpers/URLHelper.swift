@@ -1,7 +1,6 @@
 //
 //  URLHelper.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //
@@ -15,7 +14,6 @@ extension URL {
                 return UIApplication.shared.canOpenURL(url as URL)
             }
         }
-        
         return false
     }
 }

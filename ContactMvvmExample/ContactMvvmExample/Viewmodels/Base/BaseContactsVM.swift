@@ -1,7 +1,6 @@
 //
 //  BaseContactsVM.swift
 //  ContactMvvmExample
-//
 //  Created by Chandresh Maurya  on 03/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
@@ -66,7 +65,6 @@ class BaseContactsVM: BaseVMRepo<ContactsRepository> {
         return sortingKeys.count
     }
 }
-
 class BaseContactVM: BaseVMRepo<ContactsRepository> {
     internal var contact: Contact?
     internal var idForUpdate: String?
@@ -85,15 +83,11 @@ class BaseContactVM: BaseVMRepo<ContactsRepository> {
     internal func getLastName() -> String? {
         return contact?.last_name
     }
-    
     internal func getIsFavorite() -> Bool {
-       
         return contact?.favorite ?? false
     }
-    
     internal func getProfileUrl() -> String? {
         let urlString = contact?.profile_pic
-        
         if URL.isvalidURL(string: urlString) {
             return urlString
         } else {
