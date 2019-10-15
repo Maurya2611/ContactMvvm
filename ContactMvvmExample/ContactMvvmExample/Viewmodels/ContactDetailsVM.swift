@@ -64,7 +64,6 @@ class ContactDetailsVM: BaseContactVM {
                             completion(error)
         })
     }
-    
     internal func createContact(completion: @escaping ((Error?) -> Void)) {
         let contact     = Contact(id: 0,
                                   first_name: firstName,
@@ -88,7 +87,6 @@ class ContactDetailsVM: BaseContactVM {
                             completion(nil)
         })
     }
-    
     internal func editContact(contact: Contact? = nil,
                               completion: @escaping ((Error?) -> Void)) {
         var contact = contact ?? self.contact
@@ -140,13 +138,13 @@ class ContactDetailsVM: BaseContactVM {
     }
     internal func validateEntries() -> String? {
         var string: String? = ""
-        if firstName?.containsANumber() == true ||
+        if firstName?.containsNumber() == true ||
             firstName?.containsEmoji == true ||
             firstName?.containsOnlyValidCharacters() == false {
             string = Strings.invalidFirstName
             return string
         }
-        if lastName?.containsANumber() == true ||
+        if lastName?.containsNumber() == true ||
             lastName?.containsEmoji == true ||
             lastName?.containsOnlyValidCharacters() == false {
             string = Strings.invalidLastName

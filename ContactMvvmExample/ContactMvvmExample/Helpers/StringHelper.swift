@@ -12,7 +12,7 @@ extension String {
         return predicate.evaluate(with: self)
     }
     internal func containsOnlyValidCharacters() -> Bool {
-        let regexStatement = "[\\p{L}\\s .,'-]*"
+        let regexStatement = "[\\A-Za-z0-9{L}\\s .,'-]*"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regexStatement)
         return predicate.evaluate(with: self)
     }
@@ -29,7 +29,7 @@ extension String {
             return false
         }
     }
-    internal func containsANumber() -> Bool {
+    internal func containsNumber() -> Bool {
         let range = self.rangeOfCharacter(from: CharacterSet.decimalDigits)
         if range != nil {
             return true
