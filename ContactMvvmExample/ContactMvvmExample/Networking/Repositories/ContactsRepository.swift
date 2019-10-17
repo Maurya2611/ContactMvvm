@@ -75,11 +75,11 @@ class ContactsRepository: Repository<Contact> {
 class MockContactsRepository: ContactsRepository {
     internal var failable: Bool = false {
         didSet {
-            (api as? MockAPI)?.failable = failable
+            (api as? MockApi)?.failable = failable
         }
     }
     override init() {
         super.init()
-        api = MockAPI(host: NetworkConfig.baseUrl)
+        api = MockApi(host: NetworkConfig.baseUrl)
     }
 }

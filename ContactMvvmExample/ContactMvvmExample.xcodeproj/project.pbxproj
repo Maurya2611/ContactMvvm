@@ -283,13 +283,13 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		E0AE88C22355706C00007D2A /* Mocking */ = {
+		E0AE88C22355706C00007D2A /* MockData */ = {
 			isa = PBXGroup;
 			children = (
 				E0AE88C32355706C00007D2A /* Success */,
 				E0AE88C92355706C00007D2A /* Failed */,
 			);
-			path = Mocking;
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		E0AE88C32355706C00007D2A /* Success */ = {
@@ -439,7 +439,7 @@
 			children = (
 				E0AE88E6235571F400007D2A /* GlobalConstant */,
 				E0AE889D23556C8400007D2A /* Helpers */,
-				E0AE88C22355706C00007D2A /* Mocking */,
+				E0AE88C22355706C00007D2A /* MockData */,
 				E0AE88CF2355706C00007D2A /* Models */,
 				E0AE88BB2355706C00007D2A /* Networking */,
 				E0AE88B42355706C00007D2A /* Viewmodels */,

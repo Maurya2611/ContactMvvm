@@ -73,7 +73,7 @@ class API {
         }
     }
 }
-class MockAPI: API {
+class MockApi: API {
     var failable: Bool?
     override init(host: String) {
         super.init(host: host)
