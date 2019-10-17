@@ -1,6 +1,7 @@
 //
 //  ContactDetailsVM.swift
 //  ContactMvvmExample
+//
 //  Created by Chandresh Maurya  on 04/07/2019.
 //  Copyright © 2019 Chandresh Maurya . All rights reserved.
 //
@@ -11,6 +12,7 @@ internal enum ContactDetailsType {
     case edit
     case view
 }
+
 class ContactDetailsVM: BaseContactVM {
     override var contact: Contact? {
         didSet {
@@ -44,14 +46,12 @@ class ContactDetailsVM: BaseContactVM {
                                 let contact = contact else {
                                     let errorMsg = error?.localizedDescription ?? ""
                                     self.viewState = .error(errorMsg)
-                                    
                                     return
                             }
                             self.contact = contact
                             self.viewState = .success(nil)
         })
     }
-    
     internal func updateFavorite(completion: @escaping ((Error?) -> Void)) {
         contact?.favorite?.toggle()
         guard let con = contact else { return }
@@ -65,16 +65,16 @@ class ContactDetailsVM: BaseContactVM {
         })
     }
     internal func createContact(completion: @escaping ((Error?) -> Void)) {
-        let contact     = Contact(id: 0,
-                                  first_name: firstName,
-                                  last_name: lastName,
-                                  email: email,
-                                  phone_number: mobile,
-                                  profile_pic: nil,
-                                  favorite: nil,
-                                  created_at: nil,
-                                  updated_at: nil)
-        repository?.create(params: contact,
+        let con     = Contact(id: 0,
+                              first_name: firstName,
+                              last_name: lastName,
+                              email: email,
+                              phone_number: mobile,
+                              profile_pic: nil,
+                              favorite: nil,
+                              created_at: nil,
+                              updated_at: nil)
+        repository?.create(params: con,
                            completion: {[weak self] (contact, error) in
                             guard let self = self,
                                 error == nil else {
@@ -103,26 +103,29 @@ class ContactDetailsVM: BaseContactVM {
                                     return
                             }
                             self.contact = contact
-                            NotificationCenter.default.post(name: Notifications.update, object: contact)
+                            NotificationCenter.default.post(name: Notifications.update,
+                                                            object: contact)
                             completion(nil)
         })
     }
-    internal func deleteContact(contactId: Int? = nil,
+    internal func deleteContact(id: Int? = nil,
                                 completion: @escaping ((Error?) -> Void)) {
-        let contId = contactId ?? contact?.id
-        guard let contactId = contId else { return }
-        repository?.delete(params: contactId,
+        let id = id ?? contact?.id
+        guard let i = id else { return }
+        repository?.delete(params: i,
                            completion: {[weak self] (contact, error) in
                             guard let self = self,
                                 error == nil else {
                                     completion(error)
                                     return
                             }
-                            NotificationCenter.default.post(name: Notifications.delete, object: self.contact)
+                            NotificationCenter.default.post(name: Notifications.delete,
+                                                            object: self.contact)
                             completion(nil)
         })
     }
-    internal func setTextFromTag(_ tag: Int, text: String) {
+    internal func setTextFromTag(_ tag: Int,
+                                 text: String) {
         switch tag {
         case 0:
             firstName = text
@@ -137,7 +140,7 @@ class ContactDetailsVM: BaseContactVM {
         }
     }
     internal func validateEntries() -> String? {
-        var string: String? = ""
+        var string: String? = nil
         if firstName?.containsNumber() == true ||
             firstName?.containsEmoji == true ||
             firstName?.containsOnlyValidCharacters() == false {

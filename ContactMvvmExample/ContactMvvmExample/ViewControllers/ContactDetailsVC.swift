@@ -173,7 +173,7 @@ extension ContactDetailsVC {
                                         cancelTitle: nil,
                                         acceptTitle: Strings.Ok,
                                         completion: {
-                                        completion()
+                                            completion()
         })
     }
     func createBarButtons() {

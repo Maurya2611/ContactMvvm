@@ -1,6 +1,7 @@
 //
 //  StringHelper.swift
 //  ContactMvvmExample
+//
 //  Created by Chandresh on 3/10/19.
 //  Copyright © 2019 Chandresh. All rights reserved.
 //
@@ -12,7 +13,7 @@ extension String {
         return predicate.evaluate(with: self)
     }
     internal func containsOnlyValidCharacters() -> Bool {
-        let regexStatement = "[\\A-Za-z0-9{L}\\s .,'-]*"
+        let regexStatement = "[\\p{L}\\s .,'-]*"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regexStatement)
         return predicate.evaluate(with: self)
     }
@@ -21,11 +22,12 @@ extension String {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regexStatement)
         return predicate.evaluate(with: self)
     }
-    internal func containsALetter() -> Bool {
+    internal func containsLetter() -> Bool {
         let range = self.rangeOfCharacter(from: CharacterSet.letters)
         if range != nil {
             return true
-        } else {
+        }
+        else {
             return false
         }
     }
@@ -33,7 +35,8 @@ extension String {
         let range = self.rangeOfCharacter(from: CharacterSet.decimalDigits)
         if range != nil {
             return true
-        } else {
+        }
+        else {
             return false
         }
     }
@@ -65,23 +68,24 @@ extension String {
     }
     internal func urlFromString() -> URL? {
         let type     = NSTextCheckingResult.CheckingType.link.rawValue
-        let detector = try? NSDataDetector(types: type)
-        var toUrl: URL?
-        detector?.enumerateMatches(in: self,
-                                   options: [],
-                                   range: NSMakeRange(0, self.count)) { result, _, _  in
-                                    guard let result = result,
-                                    let url = result.url  else { return }
-                                    toUrl = url
+            let detector = try! NSDataDetector(types: type)
+            var toUrl: URL?
+            detector.enumerateMatches(in: self,
+                                  options: [],
+                                  range: NSMakeRange(0, self.count)) { result, _, _ in
+                                                                    guard let result = result,
+                                        let url = result.url  else { return }
+                                                                    toUrl = url
         }
-        return toUrl ?? nil
+            return toUrl ?? nil
     }
     static func generateAlphabetArray() -> [String] {
         let aScalars = "a".unicodeScalars
         let aCode = aScalars[aScalars.startIndex].value
-        var letters: [String] = (0..<26).map { stri in String(UnicodeScalar(aCode + stri)!).uppercased()
+            var letters: [String] = (0..<26).map {
+            i in String(UnicodeScalar(aCode + i)!).uppercased()
         }
-        letters.append("#")
-        return letters
+            letters.append("#")
+            return letters
     }
 }
